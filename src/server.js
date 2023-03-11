@@ -1,12 +1,15 @@
 const sql = require("mssql");
 const tf = require("@tensorflow/tfjs-node");
 const path = require("path");
+require("dotenv").config();
+
+// console.log(process.env); // remove this after you've confirmed it is working
 
 const config = {
-  server: "easymine-cma-plus.brazilsouth.cloudapp.azure.com",
-  database: "EASYMINE_CMT_PRD_2022",
-  user: "sa",
-  password: "InsDES425",
+  server: process.env.SERVER,
+  database: process.env.DATABASE,
+  user: process.env.DATABASE_USER,
+  password: process.env.PASSWORD,
   port: 1433,
   options: {
     encrypt: true,
