@@ -1,6 +1,11 @@
-TF_ENABLE_ONEDNN_OPTS=1
+# ou may see slightly different numerical results due to floating-point
+# round-off errors from different computation orders. To turn them off,
+#set the environment variable
+TF_ENABLE_ONEDNN_OPTS=0
 
+#SQLDATABASE DATA
 SERVER= ""
 DATABASE= ""
 DATABASE_USER= ""
 PASSWORD= ""
+PORT= 1433

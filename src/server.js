@@ -41,7 +41,7 @@ sql
     console.log("Connected to SQL Server database");
     const request = new sql.Request();
 
-    request.input("interval", sql.VarChar, "M6");
+    request.input("interval", sql.VarChar, "D15");
     // request.input("param2", sql.Int, 123);
     request.execute("prQDataCicloDetalhadoBI", (err, result) => {
       if (err) {
